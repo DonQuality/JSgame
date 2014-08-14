@@ -35,12 +35,12 @@ function Deal() {
    Addscore();
 }
 function Hold(num) {
-   if (!dealt) return;
-   if (!held[num]) {
+   if ( !dealt) return;
+   if ( !held[num]) {
       held[num]=true;
       document.images[5+num].src="hold2.gif";
    } else {
-      held[num]=false;
+      held[num] = false;
       document.images[5+num].src="hold.gif";
    }
 }
@@ -91,47 +91,38 @@ function Addscore() {
    if (straight && flush && nums[4] == 13 && nums[0] == 1) {
       document.form1.message.value="Royal Flush";
       return 100;
-    } 
-	if (straight && flush) {
+   } if (straight && flush) {
      document.form1.message.value="Straight Flush";
      return 50;
-    } 
-	if (straight) {
+   } if (straight) {
       document.form1.message.value="Straight";
       return 4;
-    } 
-	if (flush) {
+   } if (flush) {
       document.form1.message.value="Flush";
       return 5;
-    } 
-	for (i=1; i<14; i++) {
+   } for (i=1; i<14; i++) {
       tally[i] = 0;
-    } 
-	for (i=0; i<5; i++) {
+   } for (i=0; i<5; i++) {
       tally[nums[i]] += 1;
-    } 
-	for (i=1; i<14; i++) {
+   } for (i=1; i<14; i++) {
      if (tally[i] == 4) {
        document.form1.message.value = "Four of a Kind";
        return 25;
     }
      if (tally[i] == 3) three = true;
      if (tally[i] == 2) pairs += 1;
-	} 
-	if (three && pairs == 1) {
+
+   } if (three && pairs == 1) {
       document.form1.message.value="Full House";
       return 10;
-    } 
-	if (pairs == 2) {
+   } if (pairs == 2) {
       document.form1.message.value="Two Pair";
       return 2;
-    } 
-	if (three) {
+   } if (three) {
       document.form1.message.value="Three of a Kind";
       return 3;
-    } 
-	if (pairs == 1) {
-    if (tally[1] == 2 || tally[11]==2
+   } if (pairs == 1) {
+      if (tally[1] == 2 || tally[11]==2
       || tally[12] == 2 || tally[13]==2) {
          document.form1.message.value="Jacks or Better";
          return 1;
