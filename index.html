@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>JSgame</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+    <body>
+    <div id="wrapper">
+    <div id="contact">
+      <img src="title.gif" width=516 height=117 id="logo" align="absmiddle">
+      <h1 id="contact">Contact me</h1>
+    </div>
+    <hr>
+    <form NAME="form1">
+      <input type="TEXT" size=20 name="message"
+            value="Press DEAL to begin.">
+      <table align="center" id="cardContainer">
+        <tr>
+        <td> <img border=0 src="blank.gif" height=100 width=100>
+        <td> <img border=0 src="blank.gif" height=100 width=100>
+        <td> <img border=0 src="blank.gif" height=100 width=100>
+        <td> <img border=0 src="blank.gif" height=100 width=100>
+        <td> <img border=0 src="blank.gif" height=100 width=100>
+        <td> </td>
+        </tr>
+        <tr>
+        <td> <p>&nbsp;</p>
+          <p>&nbsp;</p>
+        <td> <a href="#" onClick="Hold(2)">
+           <img border=0 src="hold.gif" height=50 width=106></a>
+        <td> <a href="#" onClick="Hold(3)">
+           <img border=0 src="hold.gif" height=50 width=106></a>
+        <td> <a href="#" onClick="Hold(4)">
+           <img border=0 src="hold.gif" height=50 width=106></a>
+        <td> <a href="#" onClick="Hold(5)">
+           <img border=0 src="hold.gif" height=50 width=106></a>
+        </tr>
+        <tr>
+        <td> <B>Total<BR>Score:</B>
+           <input TYPE="TEXT" SIZE=6 NAME="total" VALUE="100"></td>
+        <td colspan=2> <B>Current <BR>Hand:</B>
+        <td>
+        <td> <a href="#" onClick="DealDraw()">
+           <img border=0 src="deal.gif" height=50 width=106></a>
+        </tr>
+        </table>
+      </form>
+      </div>
+    </body>
+    </div>
+    <script type="text/javascript" src=
+    "codigo.js"></script>
+</html>
